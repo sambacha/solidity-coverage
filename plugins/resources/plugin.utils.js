@@ -94,7 +94,7 @@ function toRelativePath(pathToFile, pathToParent){
  */
 function getTempLocations(config){
   const cwd = config.workingDir;
-  const contractsDirName = '.coverage_contracts';
+  const contractsDirName = config.coverage_contracts_temp || '.coverage_contracts';
   const artifactsDirName = config.temp || '.coverage_artifacts';
 
   return {
@@ -250,7 +250,6 @@ async function finish(config, api){
   } = getTempLocations(config);
 
   shell.config.silent = true;
-  shell.rm('-Rf', tempContractsDir);
   shell.rm('-Rf', tempArtifactsDir);
   shell.config.silent = false;
 
