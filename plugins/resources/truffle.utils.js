@@ -162,6 +162,7 @@ function loadLibrary(config){
   try {
     if (config.usePluginTruffle) throw null;
 
+    console.log('++++++++++++++++++++++++++++++++ using truffle plugin')
     const globalTruffle = path.join(globalModules, 'truffle');
     const lib = require(globalTruffle);
     ui.report('lib-global');
@@ -172,6 +173,8 @@ function loadLibrary(config){
   // Plugin Copy @ v 5.0.31
   try {
     if (config.forceLibFailure) throw null; // For err unit testing
+
+    console.log('============================= using truffle.library')
 
     ui.report('lib-warn');
     return require("./truffle.library")
