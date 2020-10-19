@@ -292,7 +292,7 @@ describe('Truffle Plugin: standard use cases', function() {
     truffleConfig.logger = mock.testLogger;
     truffleConfig.version = true;
 
-    const configClientVersion = "v2.10.1";
+    const configClientVersion = "v2.12.1";
 
     // Config client
     mock.installFullProject('ganache-solcoverjs');
@@ -412,6 +412,25 @@ describe('Truffle Plugin: standard use cases', function() {
 
       `Should run "on" hooks : ${mock.loggerOutput.val}`
     );
+  });
+
+  it('config: includeStatementCoverage, includeFunctionCoverage', async function(){
+    solcoverConfig.istanbulReporter = ['json-summary', 'text']
+    solcoverConfig.measureStatementCoverage = false;
+    solcoverConfig.measureFunctionCoverage = false;
+
+    mock.install('Simple', 'simple.js', solcoverConfig);
+    await plugin(truffleConfig);
+
+    const expected = [
+      {
+        file: mock.pathToContract(truffleConfig, 'Simple.sol'),
+        total: 0
+      }
+    ];
+
+    verify.statementCoverage(expected, 'total');
+    verify.functionCoverage(expected, 'total');
   });
 
   // Fails with Truffle 5.0.31, but newer Truffle causes OOM when running whole suite.

@@ -1,5 +1,22 @@
 # Changelog
 
+0.7.11 / 2020-10-08
+========================
+  * Upgrade Web3 to ^1.3.0, ganache-cli to 6.11.0
+  * Make statement and function coverage measurement optional
+
+0.7.10 / 2020-08-18
+==================
+  * Bump parser to 0.7.0 (Solidity 0.7.0)
+
+0.7.9 / 2020-06-28
+==================
+  * Fix --testfiles glob handling (Buidler)
+
+0.7.8 / 2020-06-24
+==================
+  * Track statements in try/catch blocks correctly
+
 0.7.7 / 2020-06-10
 ==================
 
