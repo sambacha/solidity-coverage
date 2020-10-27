@@ -31,6 +31,7 @@
     "detect-port": "^1.3.0",
     "fs-extra": "^8.1.0",
     "ganache-cli": "^6.11.0",
+    "ganache-core": "git+https://github.com/sc-forks/ganache-core-sc.git#maint/bump-ganache-core",
     "ghost-testrpc": "^0.0.2",
     "global-modules": "^2.0.0",
     "globby": "^10.0.1",
