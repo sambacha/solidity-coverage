@@ -1,10 +1,21 @@
-# solidity-coverage
+# solidity-coverage-extended
 
-[![Gitter chat](https://badges.gitter.im/sc-forks/solidity-coverage.svg)][18]
-![npm (tag)](https://img.shields.io/npm/v/solidity-coverage/latest)
-[![CircleCI](https://circleci.com/gh/sc-forks/solidity-coverage.svg?style=svg)][20]
-[![codecov](https://codecov.io/gh/sc-forks/solidity-coverage/branch/master/graph/badge.svg)][21]
-[![buidler](https://buidler.dev/buidler-plugin-badge.svg?1)][26]
+
+
+Can now pass in MAX_BUFFER as environment variable
+
+```js
+   this.onPreCompile = config.onPreCompile             || this.defaultHook;
+```
+
+```js
+    // Run pre-compile hook;
+    await api.onPreCompile(config);
+```
+
+https://github.com/sc-forks/solidity-coverage/commit/63bfce90ffdb2f18f1d133fe330b3e377a218704
+https://github.com/sc-forks/solidity-coverage/commit/5588917da8706cbf6925a08fc57cbf0a78c08a2d
+https://github.com/sc-forks/solidity-coverage/commit/5588917da8706cbf6925a08fc57cbf0a78c08a2d
 
 
 ## Code coverage for Solidity testing
