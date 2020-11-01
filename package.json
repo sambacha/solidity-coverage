@@ -1,6 +1,6 @@
 {
   "name": "contractshark-solidity-coverage",
-  "version": "0.7.10",
+  "version": "0.8.0",
   "description": "Customized version of the public solidity-coverage truffle plugin",
   "main": "plugins/buidler.plugin.js",
   "bin": {
