@@ -1,13 +1,10 @@
 {
-  "name": "adhara-solidity-coverage",
+  "name": "contractshark-solidity-coverage",
   "version": "0.7.10",
   "description": "Customized version of the public solidity-coverage truffle plugin",
   "main": "plugins/buidler.plugin.js",
   "bin": {
-    "solidity-coverage": "./plugins/bin.js"
-  },
-  "publishConfig": {
-    "registry": "https://adhara.jfrog.io/artifactory/api/npm/smart-contract-modules/"
+    "contractshark-coverage": "./plugins/bin.js"
   },
   "directories": {
     "test": "test"
@@ -19,10 +16,10 @@
     "test:debug": "node --max-old-space-size=4096 ./node_modules/.bin/mocha test/units/* --timeout 100000 --no-warnings --exit",
     "netlify": "./scripts/run-netlify.sh"
   },
-  "homepage": "https://github.com/AdharaProjects/solidity-coverage",
+  "homepage": "https://github.com/contractshark/solidity-coverage",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdharaProjects/solidity-coverage.git"
+    "url": "https://github.com/contractshark/solidity-coverage.git"
   },
   "author": "",
   "license": "ISC",
@@ -55,7 +52,7 @@
     "decache": "^4.5.1",
     "mocha": "5.2.0",
     "nyc": "^14.1.1",
-    "solc": "^0.5.10",
+    "solc": "^0.5.17",
     "truffle": "^5.1.37",
     "truffle-config": "^1.1.18"
   }
